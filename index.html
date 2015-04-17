@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LazyLoad example of usage with srcset and sizes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>LazyLoad with `srcset` and `sizes`</h1>
+        <p>This is an example of lazy image loading with <strong>responsive images</strong> (using srcset and sizes on the img tag) and <strong>progressive JPEG</strong> image format.</p>
+        <p>Best practices about <strong>web performance</strong> implemented using <a href="http://verlok.github.io/lazyload/">LazyLoad</a> by <a href="http://www.andreaverlicchi.eu">Andrea Verlicchi</a>.</p>
+    </header>
+    <ul>
+        <li>
+            <img src="http://cdn4.yoox.biz/41/41494516WM_10_n_f.jpg" 
+                 srcset="http://cdn4.yoox.biz/41/41494516WM_10r_n_f.jpg 668w, 
+                        http://cdn4.yoox.biz/41/41494516WM_10_n_f.jpg 334w,
+                        http://cdn4.yoox.biz/41/41494516WM_9r_n_f.jpg 446w, 
+                        http://cdn4.yoox.biz/41/41494516WM_9_n_f.jpg 223w"
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img src="http://cdn4.yoox.biz/41/41519718KL_10_n_f.jpg" 
+                 srcset="http://cdn4.yoox.biz/41/41519718KL_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41519718KL_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41519718KL_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41519718KL_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img src="http://cdn4.yoox.biz/41/41515451QS_10_n_f.jpg" 
+                 srcset="http://cdn4.yoox.biz/41/41515451QS_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41515451QS_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41515451QS_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41515451QS_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img src="http://cdn4.yoox.biz/41/41515972UX_10_n_f.jpg" 
+                 srcset="http://cdn4.yoox.biz/41/41515972UX_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41515972UX_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41515972UX_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41515972UX_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <!-- LAZY LOAD STARTS HERE -->
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41505807JS_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41505807JS_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41505807JS_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41505807JS_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41505807JS_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41509626OX_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41509626OX_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41509626OX_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41509626OX_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41509626OX_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41494518KX_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41494518KX_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41494518KX_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41494518KX_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41494518KX_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41495955AV_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41495955AV_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41495955AV_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41495955AV_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41495955AV_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41527766IO_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41527766IO_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41527766IO_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41527766IO_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41527766IO_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41515541CU_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41515541CU_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41515541CU_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41515541CU_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41515541CU_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+        <li>
+            <img data-src="http://cdn4.yoox.biz/41/41445316NR_10_n_f.jpg" 
+                 data-srcset="http://cdn4.yoox.biz/41/41445316NR_10r_n_f.jpg 668w,
+                    http://cdn4.yoox.biz/41/41445316NR_10_n_f.jpg 334w,
+                    http://cdn4.yoox.biz/41/41445316NR_9r_n_f.jpg 446w,
+                    http://cdn4.yoox.biz/41/41445316NR_9_n_f.jpg 223w" 
+                 sizes="33.333vw">
+        </li>
+    </ul>
+    <script src="js/lazyload.min.js"></script>
+    <script>
+        new LazyLoad({
+            data_src: "src",
+            data_srcset: "srcset",
+            show_while_loading: true
+        });
+    </script>
+</body>
+</html>
