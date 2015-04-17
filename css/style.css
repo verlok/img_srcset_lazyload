@@ -24,8 +24,6 @@ p {
 }
 
 li {
-    float: left;
-    width: 25%;
     min-height: 370px;
 }
 
@@ -37,4 +35,32 @@ img {
 
 img:not([src]) {
     visibility: hidden;
+}
+
+@media (min-width: 361px) /*and (max-width: 480px)*/ {
+    li {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 481px) /*and (max-width: 768px)*/ {
+    li {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+@media (min-width: 769px) /*and (max-width: 1024)*/ {
+    li {
+        float: left;
+        width: 25%;
+    }
+}
+
+@media (min-width: 1025px) /*and (max-width: infinite)*/ {
+    li {
+        float: left;
+        width: 20%;
+    }
 }
