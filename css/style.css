@@ -4,10 +4,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 
 /* AUTHOR */ 
 
-body {
-
-}
-
 header {
     margin: 50px 0 110px;
     text-align: center;
@@ -28,6 +24,10 @@ p {
 
 header li {
     text-align: left;
+}
+
+[title] {
+    border-bottom: 1px dotted #333;
 }
 
 .products {
@@ -71,7 +71,7 @@ img {
     margin-bottom: 70px;
 }
 
-img:not([src]) {
+img:not([srcset]:not([src])) {
     visibility: hidden;
 }
 
