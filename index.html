@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This is an example of lazy image loading with responsive images (using srcset and sizes on the img tag) and progressive JPEG image format. Best practices about web performance implemented using LazyLoadby Andre Verlicchi">
+    <meta name="description" content="This is an example of lazy image loading with responsive images (using srcset and sizes on the img tag) and progressive JPEG image format. Best practices about web performance implemented using LazyLoad by Andrea Verlicchi">
     <title>LazyLoad example of usage with srcset and sizes</title>
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
@@ -13,14 +13,14 @@
 </head>
 <body>
     <header>
-        <h1>LazyLoad with `srcset` and `sizes`</h1>
-        <p>This is an example of lazy image loading with <strong>responsive images</strong> (using srcset and sizes on the img tag) and <strong>progressive JPEG</strong> image format.</p>
-        <p>Best practices about <strong>web performance</strong> implemented using <a href="http://verlok.github.io/lazyload/">LazyLoad</a> by <a href="http://www.andreaverlicchi.eu">Andrea Verlicchi</a>.</p>
+        <h1>LazyLoad and responsive images</h1>
+        <p>This is an example of <strong title="Images are loaded only as they enter the viewport through the usage of my LazyLoad script, which supports the srcset attribute in addition to the good old src attribute.">lazy image loading</strong> with <strong title="Responsive images are implemented using the img tag with the srcset and sizes attribute +  picturefill as polyfill for older browsers">responsive images</strong> and <strong title="Progressive JPEG rendering is guaranteed through the usage of the show_while_loading option of my LazyLoad script.">progressive JPEG</strong> image format.</p>
+        <p>These best practices about <strong>web performance</strong> were implemented using <a href="http://verlok.github.io/lazyload/">LazyLoad</a> by <a href="http://www.andreaverlicchi.eu">Andrea Verlicchi</a>.</p>
     </header>
-    <ul>
+    <ul class="products">
         <li>
-            <img src="http://cdn4.yoox.biz/41/41494516WM_10_n_f.jpg" 
-                 srcset="http://cdn4.yoox.biz/41/41494516WM_10r_n_f.jpg 668w, 
+            <img src="http://cdn4.yoox.biz/41/41494516WM_10_n_f.jpg"
+                 srcset="http://cdn4.yoox.biz/41/41494516WM_10r_n_f.jpg 668w,
                         http://cdn4.yoox.biz/41/41494516WM_10_n_f.jpg 334w,
                         http://cdn4.yoox.biz/41/41494516WM_9r_n_f.jpg 446w, 
                         http://cdn4.yoox.biz/41/41494516WM_9_n_f.jpg 223w"
@@ -31,7 +31,7 @@
                         100vw">
         </li>
         <li>
-            <img src="http://cdn4.yoox.biz/41/41519718KL_10_n_f.jpg" 
+            <img src="http://cdn4.yoox.biz/41/41519718KL_10_n_f.jpg"
                  srcset="http://cdn4.yoox.biz/41/41519718KL_10r_n_f.jpg 668w,
                     http://cdn4.yoox.biz/41/41519718KL_10_n_f.jpg 334w,
                     http://cdn4.yoox.biz/41/41519718KL_9r_n_f.jpg 446w,
@@ -43,7 +43,7 @@
                         100vw">
         </li>
         <li>
-            <img src="http://cdn4.yoox.biz/41/41515451QS_10_n_f.jpg" 
+            <img src="http://cdn4.yoox.biz/41/41515451QS_10_n_f.jpg"
                  srcset="http://cdn4.yoox.biz/41/41515451QS_10r_n_f.jpg 668w,
                     http://cdn4.yoox.biz/41/41515451QS_10_n_f.jpg 334w,
                     http://cdn4.yoox.biz/41/41515451QS_9r_n_f.jpg 446w,
@@ -55,7 +55,7 @@
                         100vw">
         </li>
         <li>
-            <img src="http://cdn4.yoox.biz/41/41515972UX_10_n_f.jpg" 
+            <img src="http://cdn4.yoox.biz/41/41515972UX_10_n_f.jpg"
                  srcset="http://cdn4.yoox.biz/41/41515972UX_10r_n_f.jpg 668w,
                     http://cdn4.yoox.biz/41/41515972UX_10_n_f.jpg 334w,
                     http://cdn4.yoox.biz/41/41515972UX_9r_n_f.jpg 446w,
@@ -152,7 +152,8 @@
                         100vw">
         </li>
     </ul>
-    <script src="js/lazyload.min.js"></script>
+    <script src="js/vendor/lazyload.min.js"></script>
+    <script src="js/vendor/picturefill.min.js"></script>
     <script>
         new LazyLoad({
             data_src: "src",
