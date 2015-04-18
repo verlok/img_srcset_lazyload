@@ -71,7 +71,7 @@ img {
     margin-bottom: 70px;
 }
 
-img:not([src]) {
+img:not([srcset]:not([src])) {
     visibility: hidden;
 }
 
