@@ -16,17 +16,20 @@
 <body>
 	<header>
 		<h1>LazyLoad and responsive images</h1>
-
 		<p>This is an example of
 			<strong title="Images are loaded only as they enter the viewport through the usage of my LazyLoad script, which supports the srcset attribute in addition to the good old src attribute.">lazy image loading</strong> with
 			<strong title="Responsive images are implemented using the img tag with the srcset and sizes attribute +  picturefill as polyfill for older browsers">responsive images</strong> and
 			<strong title="Progressive JPEG rendering is guaranteed through the usage of the show_while_loading option of my LazyLoad script.">progressive JPEG</strong> image format.</p>
-
 		<p>These best practices about
 			<strong>web performance</strong> were implemented using <a href="http://verlok.github.io/lazyload/">LazyLoad</a> by <a href="http://www.andreaverlicchi.eu">Andrea Verlicchi</a>.</p>
-
-		<p>This solution works from Internet Explorer 7 up.</p>
+		<p>This solution works from Internet Explorer 8 up.</p>
+		<nav>
+			<a href="index.html">With picturefill 2</a> |
+			<a href="index_pf3.html">With picturefill 3</a> |
+			<a href="index_pf3_iosfix.html">With picturefill 3 + ios scroll fix</a>
+		</nav>
 	</header>
+
 	<ul class="products">
 		<li>
 			<img srcset="img/41494516WM_10r_n_f.jpg 668w,
