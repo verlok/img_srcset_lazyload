@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is an example of lazy image loading with responsive images (using srcset and sizes on the img tag) and progressive JPEG image format. Best practices about web performance implemented using LazyLoad by Andrea Verlicchi">
+	<title>LazyLoad example of usage with srcset and sizes</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lt IE 9]>
+	<script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header>
+		<h1>LazyLoad and responsive images</h1>
+		<p>This is an example of
+			<strong title="Images are loaded only as they enter the viewport through the usage of my LazyLoad script, which supports the srcset attribute in addition to the good old src attribute.">lazy image loading</strong> with
+			<strong title="Responsive images are implemented using the img tag with the srcset and sizes attribute +  picturefill as polyfill for older browsers">responsive images</strong> and
+			<strong title="Progressive JPEG rendering is guaranteed through the usage of the show_while_loading option of my LazyLoad script.">progressive JPEG</strong> image format.</p>
+		<p>These best practices about
+			<strong>web performance</strong> were implemented using <a href="http://verlok.github.io/lazyload/">LazyLoad</a> by <a href="http://www.andreaverlicchi.eu">Andrea Verlicchi</a>.</p>
+		<p>This solution works from Internet Explorer 8 up.</p>
+		<nav>
+			<a href="index.html">With picturefill 2</a> |
+			<a href="index_pf3.html">With picturefill 3</a> |
+			<a href="index_pf3_iosfix.html">With picturefill 3 + ios scroll fix</a>
+		</nav>
+	</header>
+
+	<ul class="products">
+		<li>
+			<img srcset="img/41494516WM_10r_n_f.jpg 668w,
+                        img/41494516WM_10_n_f.jpg 334w,
+                        img/41494516WM_9r_n_f.jpg 446w,
+                        img/41494516WM_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img srcset="img/41519718KL_10r_n_f.jpg 668w,
+                    img/41519718KL_10_n_f.jpg 334w,
+                    img/41519718KL_9r_n_f.jpg 446w,
+                    img/41519718KL_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img srcset="img/41515451QS_10r_n_f.jpg 668w,
+                    img/41515451QS_10_n_f.jpg 334w,
+                    img/41515451QS_9r_n_f.jpg 446w,
+                    img/41515451QS_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img srcset="img/41515972UX_10r_n_f.jpg 668w,
+                    img/41515972UX_10_n_f.jpg 334w,
+                    img/41515972UX_9r_n_f.jpg 446w,
+                    img/41515972UX_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<!-- LAZY LOAD STARTS HERE -->
+		<li>
+			<img data-srcset="img/41505807JS_10r_n_f.jpg 668w,
+                    img/41505807JS_10_n_f.jpg 334w,
+                    img/41505807JS_9r_n_f.jpg 446w,
+                    img/41505807JS_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41509626OX_10r_n_f.jpg 668w,
+                    img/41509626OX_10_n_f.jpg 334w,
+                    img/41509626OX_9r_n_f.jpg 446w,
+                    img/41509626OX_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494518KX_10r_n_f.jpg 668w,
+                    img/41494518KX_10_n_f.jpg 334w,
+                    img/41494518KX_9r_n_f.jpg 446w,
+                    img/41494518KX_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41495955AV_10r_n_f.jpg 668w,
+                    img/41495955AV_10_n_f.jpg 334w,
+                    img/41495955AV_9r_n_f.jpg 446w,
+                    img/41495955AV_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41527766IO_10r_n_f.jpg 668w,
+                    img/41527766IO_10_n_f.jpg 334w,
+                    img/41527766IO_9r_n_f.jpg 446w,
+                    img/41527766IO_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41515541CU_10r_n_f.jpg 668w,
+                    img/41515541CU_10_n_f.jpg 334w,
+                    img/41515541CU_9r_n_f.jpg 446w,
+                    img/41515541CU_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41445316NR_10r_n_f.jpg 668w,
+                    img/41445316NR_10_n_f.jpg 334w,
+                    img/41445316NR_9r_n_f.jpg 446w,
+                    img/41445316NR_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494510HT_10r_n_f.jpg 668w,
+                        img/41494510HT_10_n_f.jpg 334w,
+                        img/41494510HT_9r_n_f.jpg 446w,
+                        img/41494510HT_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494503BR_10r_n_f.jpg 668w,
+                        img/41494503BR_10_n_f.jpg 334w,
+                        img/41494503BR_9r_n_f.jpg 446w,
+                        img/41494503BR_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494509QP_10r_n_f.jpg 668w,
+                        img/41494509QP_10_n_f.jpg 334w,
+                        img/41494509QP_9r_n_f.jpg 446w,
+                        img/41494509QP_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41498537CV_10r_n_f.jpg 668w,
+                        img/41498537CV_10_n_f.jpg 334w,
+                        img/41498537CV_9r_n_f.jpg 446w,
+                        img/41498537CV_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494504KV_10r_n_f.jpg 668w,
+                        img/41494504KV_10_n_f.jpg 334w,
+                        img/41494504KV_9r_n_f.jpg 446w,
+                        img/41494504KV_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41528996NR_10r_n_f.jpg 668w,
+                        img/41528996NR_10_n_f.jpg 334w,
+                        img/41528996NR_9r_n_f.jpg 446w,
+                        img/41528996NR_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494513VB_10r_n_f.jpg 668w,
+                        img/41494513VB_10_n_f.jpg 334w,
+                        img/41494513VB_9r_n_f.jpg 446w,
+                        img/41494513VB_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41481779KX_10r_n_f.jpg 668w,
+                        img/41481779KX_10_n_f.jpg 334w,
+                        img/41481779KX_9r_n_f.jpg 446w,
+                        img/41481779KX_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41502512QH_10r_n_f.jpg 668w,
+                        img/41502512QH_10_n_f.jpg 334w,
+                        img/41502512QH_9r_n_f.jpg 446w,
+                        img/41502512QH_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41505825CN_10r_n_f.jpg 668w,
+                        img/41505825CN_10_n_f.jpg 334w,
+                        img/41505825CN_9r_n_f.jpg 446w,
+                        img/41505825CN_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41498540PT_10r_n_f.jpg 668w,
+                        img/41498540PT_10_n_f.jpg 334w,
+                        img/41498540PT_9r_n_f.jpg 446w,
+                        img/41498540PT_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41505826HA_10r_n_f.jpg 668w,
+                        img/41505826HA_10_n_f.jpg 334w,
+                        img/41505826HA_9r_n_f.jpg 446w,
+                        img/41505826HA_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494508UC_10r_n_f.jpg 668w,
+                        img/41494508UC_10_n_f.jpg 334w,
+                        img/41494508UC_9r_n_f.jpg 446w,
+                        img/41494508UC_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41511121NC_10r_n_f.jpg 668w,
+                        img/41511121NC_10_n_f.jpg 334w,
+                        img/41511121NC_9r_n_f.jpg 446w,
+                        img/41511121NC_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41498534HD_10r_n_f.jpg 668w,
+                        img/41498534HD_10_n_f.jpg 334w,
+                        img/41498534HD_9r_n_f.jpg 446w,
+                        img/41498534HD_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494506BO_10r_n_f.jpg 668w,
+                        img/41494506BO_10_n_f.jpg 334w,
+                        img/41494506BO_9r_n_f.jpg 446w,
+                        img/41494506BO_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41514472AE_10r_n_f.jpg 668w,
+                        img/41514472AE_10_n_f.jpg 334w,
+                        img/41514472AE_9r_n_f.jpg 446w,
+                        img/41514472AE_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41494505BP_10r_n_f.jpg 668w,
+                        img/41494505BP_10_n_f.jpg 334w,
+                        img/41494505BP_9r_n_f.jpg 446w,
+                        img/41494505BP_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41546709PC_10r_n_f.jpg 668w,
+                        img/41546709PC_10_n_f.jpg 334w,
+                        img/41546709PC_9r_n_f.jpg 446w,
+                        img/41546709PC_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+		<li>
+			<img data-srcset="img/41498660FP_10r_n_f.jpg 668w,
+                        img/41498660FP_10_n_f.jpg 334w,
+                        img/41498660FP_9r_n_f.jpg 446w,
+                        img/41498660FP_9_n_f.jpg 223w" sizes="(min-width: 361px) 50vw,
+                        (min-width: 481px) 33.333vw,
+                        (min-width: 769px) 25vw,
+                        (min-width: 1025px) 20vw,
+                        100vw">
+		</li>
+	</ul>
+	<script src="js/vendor/lazyload.min.js"></script>
+	<script src="js/vendor/picturefill3_rc1.min.js"></script>
+	<script>
+		new LazyLoad({
+			data_src: "src",
+			data_srcset: "srcset",
+			show_while_loading: true,
+			callback_set: function(img) {
+				picturefill({
+					elements: [img]
+				});
+			}
+		});
+	</script>
+</body>
+
+</html>
